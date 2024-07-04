@@ -1,5 +1,9 @@
-<script>
+<script lang="ts">
     export let data;
 </script>
 
-<h1>{data.content}</h1>
+<div>
+  {#each data.content as { id, quantity } (id)}
+    <div>{id} - {quantity}</div>
+  {/each}
+</div>
